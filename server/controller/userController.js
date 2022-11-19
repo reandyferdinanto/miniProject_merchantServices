@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 
 exports.register = (req, res) => {
   if (req.body.username != "" && req.body.password != "") {
-    const { username, password } = req.body;
+    const { username, password, address, phone_number } = req.body;
     const selectSql = `SELECT username FROM users WHERE username = "${username}"`;
     const selects = pool.query(selectSql, (err, result) => {
       console.log(result);
@@ -14,7 +14,7 @@ exports.register = (req, res) => {
           message: `username already registered`,
         });
       } else {
-        const registersSql = `INSERT INTO users (username, password) VALUES ("${username}", "${password}")`;
+        const registersSql = `INSERT INTO users (username, password, address, phone_number) VALUES ("${username}", "${password}", "${address}", "${phone_number}")`;
         const registers = pool.query(registersSql, (err, result) => {
           return res.json({
             message: `Hi  ${username}  Your Registration is Succesful`,
