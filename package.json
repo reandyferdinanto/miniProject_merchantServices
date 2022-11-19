@@ -1,0 +1,29 @@
+{
+  "name": "merchantservices",
+  "version": "1.0.0",
+  "description": "merchant services by Reandy",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reandyferdinanto/merchant_services.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reandyferdinanto/merchant_services/issues"
+  },
+  "homepage": "https://github.com/reandyferdinanto/merchant_services#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20"
+  }
+}
