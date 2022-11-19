@@ -27,4 +27,8 @@ $ npm install express dotenv mysql2 express-session jsonwebtoken
 $ npm install nodemon
 ```
 
-![login](/login_jpg/login.jpg)
+## How to Login
+![login](/readme_jpg/login.jpg)
+
+## Notes
+This Readme is not yet finished beacuse of some error when embeded picture
