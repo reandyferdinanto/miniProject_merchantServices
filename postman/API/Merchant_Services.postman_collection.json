@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "b546e9b2-e421-46ff-8a66-0e7d67144970",
+		"name": "Merchant_Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23401470"
+	},
+	"item": [
+		{
+			"name": "POST Register New User - localhost:5000/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Abraham\",\r\n    \"password\" : \"123456\",\r\n    \"address\" : \"Bekasi No. 25\",\r\n    \"phone_number\" : \"081316\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Login Merchant - localhost:5000/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJhamFqIiwiaWF0IjoxNjY4ODMwNjAzLCJleHAiOjE2Njg4Mzc4MDN9.lHQK7Br8GzPBCSNuJfqh_avyML3XgrOU6C4jXEgBxJY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Abraham\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all users or merchant - localhost:5000/users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFicmFoYW0iLCJpYXQiOjE2Njg4NjkwMjksImV4cCI6MTY2ODg3NjIyOX0.tNB0ooAWCw7qsIj3pfddiNZOKZYaXg2uqeo3Q43WX0E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Product - localhost:5000/Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFicmFoYW0iLCJpYXQiOjE2Njg4NjkwMjksImV4cCI6MTY2ODg3NjIyOX0.tNB0ooAWCw7qsIj3pfddiNZOKZYaXg2uqeo3Q43WX0E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prodName\" : \"Charger Oppo\",\r\n    \"prodQty\" : 8,\r\n    \"prodPrice\" : 120000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/Products",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product by Id- localhost:5000/Products/4",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFicmFoYW0iLCJpYXQiOjE2Njg4NjkwMjksImV4cCI6MTY2ODg3NjIyOX0.tNB0ooAWCw7qsIj3pfddiNZOKZYaXg2uqeo3Q43WX0E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/Products/4",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Products",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update product by ID - localhost:5000/Products/5",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFicmFoYW0iLCJpYXQiOjE2Njg4NjkwMjksImV4cCI6MTY2ODg3NjIyOX0.tNB0ooAWCw7qsIj3pfddiNZOKZYaXg2uqeo3Q43WX0E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prodName\" : \"charger Oppo terbaru\",\r\n    \"prodQty\" : 50,\r\n    \"prodPrice\" : 50000\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/Products/5",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Products",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all products - localhost:5000/products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFicmFoYW0iLCJpYXQiOjE2Njg4NjkwMjksImV4cCI6MTY2ODg3NjIyOX0.tNB0ooAWCw7qsIj3pfddiNZOKZYaXg2uqeo3Q43WX0E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
