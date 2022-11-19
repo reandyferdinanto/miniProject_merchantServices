@@ -27,6 +27,9 @@ $ npm install express dotenv mysql2 express-session jsonwebtoken
 $ npm install nodemon
 ```
 
+## ERD Diagram for Merchant Services
+![ERD](/erd_diagram_folder/erd-merchant_services.JPG)
+
 ## How to Login
 ![login](/readme_jpg/login.jpg)
 
